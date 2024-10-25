@@ -1,0 +1,386 @@
+/* =========== Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+/* =========== Browser Reset ============ */
+:root {
+  /* Color Variables */
+  --primary: #ffc400;
+  --text-1: #0f2341;
+  --text-2: #a9a9a9;
+  --white: #fff;
+  --shadow-300: 0 5px 5px rgba(0, 0, 0, 0.3);
+  --shadow-500: 0 5px 5px rgba(0, 0, 0, 0.5);
+  --transition-300: all 300ms ease-in-out;
+  --transition-500: all 500ms ease-in-out;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: var(--white);
+  color: var(--text-1);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-1);
+}
+
+p {
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+img,
+video {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========== Custom Classes ============ */
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 5rem 0;
+  padding: 10rem 0 5rem;
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 4rem;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 567px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+
+  .section {
+    margin: 5rem 0;
+    padding: 5rem 0 0;
+  }
+}
+
+/* =========== Navigation ============ */
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999;
+  padding: 1rem 0;
+
+
+}
+
+.nav {
+  max-width: 996px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 15rem;
+  height: 10rem;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.class {
+  display: inline-block;
+  padding: 1rem;
+  color: #DC143C;
+}
+
+.btn {
+  display: inline-block;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: var(--primary);
+  padding: 1.5rem 2.5rem;
+  transition: var(--transition-300);
+}
+
+.btn:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-500);
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.sign-up {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: var(--transition-300);
+}
+
+.btn.sign-up:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.hamburger {
+  display: none;
+  font-size: 3rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.navigation.fix {
+  position: fixed;
+  background-color: var(--text-1);
+}
+
+@media (max-width: 768px) {
+  .btn.sign-up {
+    display: none;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 0;
+    height: 100%;
+    max-width: 80%;
+    padding: 3rem 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: var(--shadow-300);
+    transition: var(--transition-500);
+  }
+
+  .nav-list.open {
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-list .nav-item {
+    margin: 0 0 1rem;
+    color: black;
+  }
+
+  .nav-list .class {
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--text-1);
+    font-weight: 500;
+
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+/* =========== Home ============ */
+
+.footer {
+  background-color: var(--text-1);
+}
+
+.footer .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 7rem 3rem;
+}
+
+.footer .row .col:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .row .col:last-child img {
+  height: 10rem;
+}
+
+.footer .row .col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .row .col h3 {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.footer .row .col a {
+  display: inline-block;
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .footer .row {
+    row-gap: 7rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 567px) {
+  .footer .row {
+    gap: 4rem 0;
+    grid-template-columns: 1fr;
+  }
+}
+.grid {
+  display: grid;
+  width: 75em;
+  grid-gap:4rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+
+.grid-item {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.grid-item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 3rem;
+}
+
+.card-header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+
+.card-btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #d8e0fd;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  background-color: #c2cffc;
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+  margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 60em) {
+  body {
+    padding: 3rem;
+  }
+
+  .grid {
+    grid-gap: 3rem;
+  }
+}
+
+.div-1 img{
+    width: 90%;
+    height: 20%;
+    margin-left: 60px;
+    margin-top: 10px;
+}
