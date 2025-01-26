@@ -108,8 +108,6 @@ video {
   width: 100%;
   z-index: 99999999;
   padding: 1rem 0;
-
-
 }
 
 .nav {
@@ -120,8 +118,9 @@ video {
 }
 
 .logo img {
-  width: 25rem;
-  height: 20rem;
+   width: 10rem;
+  height:18rem;
+  margin-left: -50px;
 }
 
 .nav-item:not(:last-child) {
@@ -222,8 +221,9 @@ video {
   }
 
   .logo img {
-    width: 5rem;
-    height: 5rem;
+    width: -5rem;
+    height: -5rem;
+    margin-left: 40px;
   }
 }
 

@@ -130,8 +130,10 @@ video {
 }
 
 .logo img {
-  width: 15rem;
-  height:10rem;
+  width: 10rem;
+  height:8rem;
+  margin-left: -50px;
+/*  border-radius: 60%;*/
 }
 
 .nav-item:not(:last-child) {
@@ -231,10 +233,11 @@ video {
     display: flex;
   }
 
-    /*.logo img {
-      width: 5rem;
-      height: 5rem;
-    }*/
+    .logo img {
+      width: 8rem;
+      height: 7rem;
+      margin-left: 30px;
+    }
 }
 
 /* =========== Home ============ */

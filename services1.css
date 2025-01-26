@@ -56,10 +56,6 @@
 .btn:hover {
   background-color: var(--primary-color-dark);
 }
-
-
-
-
 .badge {
   position: absolute;
   top: 1rem;
@@ -687,8 +683,9 @@ p {
 }
 
 .logo img {
-  width: 15rem;
-  height: 10rem;
+  width: 7rem;
+  height:6rem;
+  margin-left: -50px;
 }
 
 .nav-item:not(:last-child) {
@@ -791,6 +788,7 @@ p {
   .logo img {
     width: 5rem;
     height: 5rem;
+    margin-left: 50px;
   }
 }
 .div-1 img{
